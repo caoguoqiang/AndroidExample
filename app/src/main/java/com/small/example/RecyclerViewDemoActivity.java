@@ -33,7 +33,7 @@ public class RecyclerViewDemoActivity extends Activity {
         p.name = "草国企昂";
         p.sex = "男";
         list.add(p);
-        p.name = "王梦颖";
+        p.name = "哇啦个擦";
         p.sex = "女";
         list.add(p);
         for(int i = 0;i<50;i++){

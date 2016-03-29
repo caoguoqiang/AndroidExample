@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.small.example.activity.SwitchButtonActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -53,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void recy(View view){
         Intent intent = new Intent(this,RecyclerViewDemoActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchButton(View view){
+        Intent intent = new Intent(this, SwitchButtonActivity.class);
         startActivity(intent);
     }
 }

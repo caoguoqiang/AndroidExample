@@ -21,6 +21,8 @@
 
         <activity android:name=".RecyclerViewDemoActivity"/>
 
+        <activity android:name=".activity.SwitchButtonActivity"/>
+
     </application>
 
 </manifest>
