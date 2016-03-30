@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.small.example.activity.SwitchButtonActivity;
+import com.small.example.meituan.Activity01;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void switchButton(View view){
         Intent intent = new Intent(this, SwitchButtonActivity.class);
+        startActivity(intent);
+    }
+
+    public void cityChoose(View view){
+        Intent intent = new Intent(this, Activity01.class);
         startActivity(intent);
     }
 }

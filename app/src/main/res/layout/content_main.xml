@@ -30,4 +30,10 @@
         android:onClick="switchButton"
         android:text="switchButton" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cityChoose"
+        android:text="仿美团城市选择器" />
+
 </LinearLayout>

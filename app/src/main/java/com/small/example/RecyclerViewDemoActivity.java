@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.small.example.adapter.PersonAdapter;
 import com.small.example.model.Person;
@@ -14,14 +16,18 @@ import java.util.List;
 /**
  * Created by cao on 2016/3/25.
  */
-public class RecyclerViewDemoActivity extends Activity {
+public class RecyclerViewDemoActivity extends Activity implements View.OnClickListener {
 
+    private PersonAdapter pa;
     private RecyclerView recyclerview ;
+    private Button click;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_recyclerview);
 
+        click = (Button) super.findViewById(R.id.click);
+        click.setOnClickListener(this);
         recyclerview = (RecyclerView) super.findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
 
@@ -43,10 +49,21 @@ public class RecyclerViewDemoActivity extends Activity {
             list.add(p2);
         }
 
-        PersonAdapter pa = new PersonAdapter(list);
+        pa = new PersonAdapter(list);
         recyclerview.setAdapter(pa);
 
+        recyclerview.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
+    }
 
-
+    @Override
+    public void onClick(View v) {
+//        recyclerview.scrollTo(100,100);
+        recyclerview.scrollToPosition(40);
+        pa.notifyDataSetChanged();
     }
 }
