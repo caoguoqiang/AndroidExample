@@ -28,4 +28,7 @@ dependencies {
     compile files('libs/baidumapapi_v2_1_2.jar')
     compile files('libs/locSDK_3.1.jar')
     compile files('libs/pinyin4android1.0.jar')
+
+    compile 'com.wang.avi:library:1.0.2'
+    compile 'com.nineoldandroids:library:2.4.0'
 }

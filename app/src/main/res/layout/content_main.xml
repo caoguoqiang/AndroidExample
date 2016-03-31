@@ -36,4 +36,11 @@
         android:onClick="cityChoose"
         android:text="仿美团城市选择器" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loading"
+        android:text="loading动画" />
+
+
 </LinearLayout>

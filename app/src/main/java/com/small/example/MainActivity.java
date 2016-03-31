@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.small.example.activity.LoadingActivity;
 import com.small.example.activity.SwitchButtonActivity;
 import com.small.example.meituan.Activity01;
 
@@ -66,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void cityChoose(View view){
         Intent intent = new Intent(this, Activity01.class);
+        startActivity(intent);
+    }
+
+    public void loading(View view){
+        Intent intent = new Intent(this,LoadingActivity.class);
         startActivity(intent);
     }
 }

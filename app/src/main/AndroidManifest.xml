@@ -54,6 +54,9 @@
 
         <!-- 仿美团城市选择器-->
         <activity android:name=".meituan.Activity01"/>
+        <!-- loading动画-->
+        <activity android:name=".activity.LoadingActivity"/>
+
 
         <service
             android:name="com.baidu.location.f"
