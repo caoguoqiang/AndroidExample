@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.small.example.activity.LoadingActivity;
+import com.small.example.activity.RectChartActivity;
 import com.small.example.activity.SwitchButtonActivity;
 import com.small.example.meituan.Activity01;
 
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void linechart(View view){
+        Intent intent = new Intent(this, com.small.example.energycurve.MainActivity.class);
+        startActivity(intent);
+    }
+
     public void recy(View view){
         Intent intent = new Intent(this,RecyclerViewDemoActivity.class);
         startActivity(intent);
@@ -74,4 +80,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,LoadingActivity.class);
         startActivity(intent);
     }
+
+    public void rect(View view){
+        Intent intent = new Intent(this, RectChartActivity.class);
+        startActivity(intent);
+    }
+
+    public void wireframet(View view){
+        Intent intent = new Intent(this, com.small.example.linechart.MainActivity.class);
+        startActivity(intent);
+    }
+
 }

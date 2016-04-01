@@ -42,5 +42,22 @@
         android:onClick="loading"
         android:text="loading动画" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="rect"
+        android:text="矩形图" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="wireframet"
+        android:text="几个图" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="linechart"
+        android:text="温度表" />
 
 </LinearLayout>

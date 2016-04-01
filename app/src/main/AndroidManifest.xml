@@ -57,6 +57,12 @@
         <!-- loading动画-->
         <activity android:name=".activity.LoadingActivity"/>
 
+        <!-- 矩形图  柱状图-->
+        <activity android:name=".activity.RectChartActivity"/>
+
+        <activity android:name=".linechart.MainActivity"/>
+        <activity android:name=".energycurve.MainActivity"/>
+
 
         <service
             android:name="com.baidu.location.f"
