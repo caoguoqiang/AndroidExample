@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<!--
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         android:layout_margin="20dp">
 
@@ -14,15 +15,25 @@
             android:id="@+id/ll_chart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
             android:orientation="vertical">
+-->
 
             <com.small.example.view.RectChart
                 android:id="@+id/rc_view"
-                android:layout_width="2000dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_gravity="start"
+                android:layout_margin="20dp"
                 android:background="@color/colorAccent" />
-        </LinearLayout>
-    </HorizontalScrollView>
+        <!--</LinearLayout>-->
+    <!--</HorizontalScrollView>-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scroll"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scroll1"/>
 </LinearLayout>
