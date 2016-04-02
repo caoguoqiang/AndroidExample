@@ -57,11 +57,11 @@ public class RectChart extends View {
         if(list!= null){
             this.datas = list;
             maxHeight = findMaxPowers(datas);
-            initPoints();
+//            initPoints();
 //            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(list.size() * 60,600);
 //            setLayoutParams(lp);
 
-            invalidate();
+//            invalidate();
         }
     }
 
@@ -96,8 +96,8 @@ public class RectChart extends View {
             float y = f/(maxHeight/this.getHeight());
             spacingOfX = paint.getStrokeWidth()+20;//(float) (this.getWidth() - getPaddingLeft() - getPaddingRight()) / (float) (datas.size() - 1);
             float maxX = getWidth()/2;
-            float x =  (i * spacingOfX)+moveX;
-            canvas.drawLine(x, this.getHeight(), x, y, paint);
+            float x =  maxX-(i * spacingOfX)+moveX;
+            canvas.drawLine(x, this.getHeight(), x, this.getHeight()-y, paint);
         }
     }
 
@@ -131,14 +131,15 @@ public class RectChart extends View {
                 break;
             case MotionEvent.ACTION_UP:
                 lastX = moveX;
-                scroll((int)(getX()+lastX),lastX);
+                scroll(x,lastX);
                 break;
         }
         return true;
     }
 
     private void scroll(int startX,int x){
-        mScroller.startScroll(-startX, 0, -x, 0,500);
+//        mScroller.fling(getWidth(), 0, 10000, 0, 0, Integer.MAX_VALUE,0,0);
+        mScroller.startScroll(startX, 0, startX+150, 0,5000);
         invalidate();
     }
 
@@ -150,9 +151,10 @@ public class RectChart extends View {
 
             scrollTo(mScroller.getCurrX(), 0);
 //            必须调用该方法，否则不一定能看到滚动效果
+            Log.e("cgq", "" + mScroller.getCurrX());
             postInvalidate();
         }
-        Log.e("cgq", "" + getX());
+
         super.computeScroll();
     }
 
